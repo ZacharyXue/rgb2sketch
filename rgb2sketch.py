@@ -22,10 +22,8 @@ parser.add_argument("--name", default='13')
 arg = parser.parse_args()
 
 # 传入图片
-# img_path = "./pic/13.jpg"
 img_path = os.path.join("./pic", arg.name + ".jpg")
 raw = cv2.imread(img_path)
-# cv2.imshow("img", img)
 
 # 灰度图
 gray = cv2.cvtColor(raw, cv2.COLOR_BGR2GRAY)
